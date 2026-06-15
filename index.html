@@ -15,14 +15,12 @@ html, body {
   background: #f4ecdf;
   font-size: 12px;
 }
-.seal { width: 100%; height: 100%; }
-
 /* ---------- Page shell ---------- */
 .producer, .cover {
   position: relative;
   width: 210mm;
   min-height: 297mm;
-  padding: 16mm 16mm 14mm 16mm;
+  padding: 12mm 13mm 11mm 13mm;
   margin: 0 auto;
   background: #f4ecdf;
   page-break-after: always;
@@ -34,15 +32,14 @@ html, body {
 .producer::before, .cover::before {
   content: "";
   position: absolute;
-  inset: 8mm;
+  inset: 5mm;
   border: 0.6pt solid #c9a76a;
   pointer-events: none;
 }
 
 /* ---------- Cover ---------- */
 .cover { display: flex; flex-direction: column; align-items: center; text-align: center; background: #fbf6ec; }
-.cover-inner { width: 100%; padding-top: 14mm; display:flex; flex-direction:column; align-items:center; }
-.cover-mark { width: 30mm; height: 30mm; color: #8a1f33; opacity: 0.85; margin-bottom: 4mm; }
+.cover-inner { width: 100%; padding-top: 20mm; display:flex; flex-direction:column; align-items:center; }
 .logo { max-width: 130mm; margin: 0 auto 6mm auto; display:block; }
 .cover-rule { width: 60mm; height: 1pt; background: #c9a76a; margin: 4mm auto; }
 .cover-rule.small { width: 40mm; margin: 6mm auto 8mm auto; }
@@ -75,21 +72,21 @@ html, body {
 }
 
 /* ---------- Producer header ---------- */
-.producer-head { margin-bottom: 4mm; }
+.producer-head { margin-bottom: 3mm; }
 .eyebrow {
-  font-size: 9pt; letter-spacing: 3.5px; text-transform: uppercase; color: #8a1f33;
-  font-style: normal; font-weight: 600; margin-bottom: 1.5mm;
+  font-size: 9.5pt; letter-spacing: 3.5px; text-transform: uppercase; color: #8a1f33;
+  font-style: normal; font-weight: 600; margin-bottom: 1mm;
 }
 .producer h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 27pt; font-weight: 600; margin: 0; color: #2b2117; letter-spacing: 0.5px;
-  line-height: 1.1;
+  font-size: 29pt; font-weight: 600; margin: 0; color: #2b2117; letter-spacing: 0.5px;
+  line-height: 1.08;
 }
-.subtitle { font-style: italic; font-size: 11.5pt; color: #6b5a45; margin-top: 1mm; }
-.rule { height: 1pt; background: linear-gradient(to right, #c9a76a, transparent); margin-top: 3mm; }
+.subtitle { font-style: italic; font-size: 12.5pt; color: #6b5a45; margin-top: 1mm; }
+.rule { height: 1pt; background: linear-gradient(to right, #c9a76a, transparent); margin-top: 2.5mm; }
 
 /* ---------- Body / bio ---------- */
-.bio-block { display: block; margin-bottom: 3mm; }
+.bio-block { display: block; margin-bottom: 2mm; }
 .bio-block.with-image { display: flex; gap: 6mm; align-items: flex-start; }
 .bio-block.with-image .bio { flex: 1 1 auto; }
 .portrait {
@@ -104,46 +101,51 @@ html, body {
   width: 100%; height: 38mm; object-fit: cover; display:block;
   border: 0.75pt solid #c9a76a; padding: 1.5mm; background: #fff;
 }
-.bio { font-size: 9.6pt; line-height: 1.5; text-align: justify; color: #332a1f; }
-.bio p { margin: 0 0 2.2mm 0; }
-.dense .bio { font-size: 8.6pt; line-height: 1.42; }
+.bio { font-size: 11pt; line-height: 1.42; text-align: justify; color: #332a1f; }
+.bio p { margin: 0 0 1.8mm 0; }
+.dense .bio { font-size: 9.8pt; line-height: 1.35; }
 
 .why {
-  margin: 3mm 0; padding: 2.5mm 4mm; background: #fdf8ee;
+  margin: 2mm 0; padding: 2mm 3.5mm; background: #fdf8ee;
   border-left: 2pt solid #8a1f33;
 }
 .why-label {
-  display:block; font-size: 8pt; letter-spacing: 2.5px; text-transform: uppercase;
-  color: #8a1f33; font-weight: 600; margin-bottom: 1mm;
+  display:block; font-size: 8.5pt; letter-spacing: 2.5px; text-transform: uppercase;
+  color: #8a1f33; font-weight: 600; margin-bottom: 0.8mm;
 }
-.why p { margin: 0; font-style: italic; font-size: 9.4pt; line-height: 1.45; color: #4a3b2a; }
-.dense .why p { font-size: 8.6pt; }
+.why p { margin: 0; font-style: italic; font-size: 10.6pt; line-height: 1.35; color: #4a3b2a; }
+.dense .why p { font-size: 9.6pt; }
 
 /* ---------- Wine table ---------- */
-table.wines { width: 100%; border-collapse: collapse; margin-top: 2mm; table-layout: fixed; }
+table.wines { width: 100%; border-collapse: collapse; margin-top: 1.5mm; table-layout: fixed; }
 table.wines th {
-  text-align: left; font-size: 8pt; letter-spacing: 2px; text-transform: uppercase;
-  color: #8a1f33; font-weight: 600; border-bottom: 1pt solid #8a1f33; padding: 1.5mm 2mm;
+  text-align: left; font-size: 8.6pt; letter-spacing: 2px; text-transform: uppercase;
+  color: #8a1f33; font-weight: 600; border-bottom: 1pt solid #8a1f33; padding: 1.2mm 2mm;
 }
 table.wines th.price, table.wines td.price { text-align: right; }
 table.wines th.cuvee, table.wines td.cuvee { width: 28%; }
 table.wines th.vintage, table.wines td.vintage { width: 12%; }
 table.wines th.price, table.wines td.price { width: 13%; }
 table.wines td {
-  font-size: 9.2pt; line-height: 1.38; padding: 1.8mm 2mm; vertical-align: top;
+  font-size: 10.4pt; line-height: 1.28; padding: 1.4mm 2mm; vertical-align: top;
   border-bottom: 0.5pt solid #e3d4ba; color: #332a1f;
 }
 table.wines tbody tr:nth-child(even) { background: #fbf3e6; }
 table.wines td.cuvee { font-weight: 600; color: #2b2117; }
 table.wines td.cuvee .type {
-  display:block; font-style: italic; font-weight: 400; color: #8a1f33; font-size: 8.3pt; margin-top: 0.6mm;
+  display:block; font-style: italic; font-weight: 400; color: #8a1f33; font-size: 9.2pt; margin-top: 0.5mm;
 }
 table.wines td.vintage { font-weight: 600; color: #2b2117; white-space: nowrap; }
 table.wines td.price { font-weight: 600; color: #8a1f33; font-variant-numeric: tabular-nums; white-space: nowrap; }
-table.wines.small td, table.wines.small th { font-size: 7.6pt; padding: 1mm 1.6mm; line-height: 1.26; }
-table.wines.small td.cuvee .type { font-size: 7pt; }
-table.wines.tight td, table.wines.tight th { font-size: 7.2pt; padding: 0.8mm 1.6mm; line-height: 1.2; }
-table.wines.tight td.cuvee .type { font-size: 6.6pt; }
+table.wines.small td, table.wines.small th { font-size: 9pt; padding: 0.9mm 1.6mm; line-height: 1.2; }
+table.wines.small td.cuvee .type { font-size: 8pt; }
+table.wines.tight td, table.wines.tight th { font-size: 8.4pt; padding: 0.7mm 1.6mm; line-height: 1.15; }
+table.wines.tight td.cuvee .type { font-size: 7.4pt; }
+table.wines.ultra td, table.wines.ultra th { font-size: 8pt; padding: 0.5mm 1.6mm; line-height: 1.1; }
+table.wines.ultra td.cuvee .type { font-size: 7pt; }
+.ultra .bio { font-size: 10pt; line-height: 1.32; }
+.ultra .why p { font-size: 9.8pt; }
+.ultra .why { padding: 1.5mm 3.5mm; }
 
 /* ---------- Footer ---------- */
 .page-foot {
@@ -159,14 +161,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
 
   <section class="cover">
     <div class="cover-inner">
-      <div class="cover-mark">
-<svg class="seal" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="0.75"/>
-  <text x="50" y="46" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="2" fill="currentColor">VW</text>
-  <text x="50" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="7" letter-spacing="3" fill="currentColor">VIBRANT</text>
-</svg>
-</div>
       <img class="logo" src="images/logo2.png" alt="Vibrant Wines">
       <div class="cover-rule"></div>
       <h1 class="cover-title">Tradelist</h1>
@@ -231,7 +225,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CHAMPAGNE</div>
       <h1>Antoine Berthelot</h1>
@@ -239,14 +233,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-002-002.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Antoine Berthelot launched his domaine in 2022, taking over family parcels in Verpillières-sur-Ource planted in the early 1980s. Trained in viticulture and oenology, with experience in Gevrey-Chambertin, Corsica and Les Riceys, he now crafts micro-production wines with a clear artisanal and quality-driven focus. Steep, south-facing vineyards on poor, stony soils deliver wines of striking character and precision. Farming is low-intervention and meticulous: no mechanisation, minimal copper, herbal treatments, cover crops, and strict double sorting for perfect fruit. In the cellar, gentle pressing, native yeast fermentations, and ageing in used oak preserve purity and terroir expression. No fining, no filtration, and minimal sulphur. Each parcel is vinified separately before a precise, vintage-driven blend.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>His debut releases already show remarkable elegance and personality. A rising talent to watch.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -279,7 +272,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CHAMPAGNE</div>
       <h1>Jonathan Cornevin</h1>
@@ -287,14 +280,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-004-009.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Based in Rouvres-les-Vignes (Aube, Côte des Bar), Jonathan comes from a family of growers who always sold their fruit. Trained in Beaune and shaped by top estates, everything shifted after a blind tasting of “Sous Poids” 2020 — his trigger to pursue zero-sulphur winemaking. Today he farms just two parcels: 0.6ha Pinot Noir in Bar-sur-Aube (organic), and 0.25ha Chardonnay in Rouvres-les-Vignes, a true experimental playground (high-trained vines, no trimming, no soil work, grazing animals…). In a region still bound by convention, Jonathan stands apart. In the cellar: total non-intervention.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>A future big name. First Champagnes expected around 2028. Quantity very limited.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -317,7 +309,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CHAMPAGNE</div>
       <h1>Alexandre Grimée</h1>
@@ -325,14 +317,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-003-005.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Planted in 1973 by his grandparents, a tiny 0.6ha parcel in Bonneil — an overlooked village in the western Marne Valley — lays the foundation of Alexandre's Champagnes. Mid-slope, south-facing, between forest and river, it's a perfect site for Pinot Meunier. Fifty years on, these old vines deliver some of the region's most compelling expressions. Alexandre Grimée started in 2014 at just 18, and quickly made his mark. On a microscopic scale, he crafts some of Champagne's most striking single-vineyard Meunier: one wine, one plot, one village, one vintage. Today the estate spans just 1 hectare, producing around 2,000 bottles a year — rare, sought-after, uncompromised. Certified organic, rooted in calcareous clay on steep southern slopes. Everything is done by Alexandre alone, with precision and restraint. Only the heart of the press is kept. No blending, no fixed recipe.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Tiny production. Singular vision. Quantity very limited.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -355,7 +346,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CHABLIS</div>
       <h1>Domaine du Triptyque</h1>
@@ -363,7 +354,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="hero-wide"><img src="images/img-005-013.jpg" alt=""></div>
       <div class="bio-block">
         <div class="bio"><p>Domaine du Triptyque is one of Chablis' most exciting new organic estates, founded in 2023 in the village of Venoy by Tommy Chevallier. Built from family vineyards and a six-year vision, the domaine spans just 5.5 hectares, farmed with deep respect for soil life and biodiversity. Certified organic since 2022, Tommy also pioneers resistant grape varieties such as Voltis and Floréal, dramatically reducing vineyard treatments while pushing toward a more sustainable future for Chablis. Triptyque is more than a winery: it is a philosophy where nature, wine and art converge — from artist-designed labels to the striking eco-built cellar completed in 2024 using bio-sourced materials. In the cellar: native fermentations, gentle élevage, and absolute respect for fruit and terroir.</p></div>
         
@@ -403,7 +393,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CHABLIS</div>
       <h1>Thomas Tixier</h1>
@@ -411,14 +401,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-006-015.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Thomas Tixier is part of the exciting new wave redefining Chablis. Based in Courgis — the organic stronghold of the region and home to growers like Alice De Moor, Olivier De Moor and Thomas Pico — Thomas crafts vibrant, terroir-driven wines with a deep commitment to organic farming and minimal intervention. Trained in Beaune and Dijon, Thomas first worked at the family estate before early exposure to the low-intervention philosophy of De Moor shaped his vision. In 2022 he launched his own project, focusing on just 4 hectares farmed organically. Key parcels include Grosse Terre, planted in the 1970s on marl and limestone, and Corvée, an old massal-selection vineyard planted in the 1980s. In the cellar: spontaneous fermentations, old oak barrels, no fining, no filtration, only tiny additions of sulphur when necessary.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Chiseled, energetic, deeply authentic Chablis that firmly places Thomas Tixier among the most promising new names of the region.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -441,7 +430,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CHABLIS</div>
       <h1>Domaine Tribut – Dauvissat</h1>
@@ -449,12 +438,11 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-007-017.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>For many, Raveneau and Dauvissat define benchmark Chablis. Through his marriage into the Dauvissat family and hands-on mentorship, Laurent Tribut has emerged as one of the appellation's most compelling talents. Today, alongside his daughter, he farms 5 hectares largely drawn from Dauvissat family holdings, initially vinified at the domaine under René and Vincent's guidance. Though now based at his own winery nearby, Tribut remains firmly rooted in this tradition.</p>
 <p>William Kelley: “Organic grapes, moderate yields, hand-harvesting at full maturity, fermentation in temperature-controlled stainless steel tanks and enameled steel, followed — typically from February — by élevage on the lees in used oak, form the cornerstones of the estate's approach. This methodology will be familiar to followers of Vincent Dauvissat's wines, and it remains unchanged under the new generation. In short, readers can buy with confidence across the range, which comprises just four wines under the Domaine Tribut label.”</p></div>
+        
       </div>
-      
     
   <table class="wines">
     <thead>
@@ -486,7 +474,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Aymon</h1>
@@ -494,14 +482,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-008-018.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Not born in Burgundy, yet already one of its most talked-about rising talents. Nicolas Protin, from Lorraine, trained at Comte Armand before refining his craft in Australia and New Zealand. Back in Beaune, he built a strong reputation as a sought-after vineyard contractor, trusted by top estates. In 2020 he began vinifying fruit from the very vines he farms — tiny “garage wines” that quickly gained cult attention. By 2022, Maison Aymon was born. Ultra-limited (10–15 barrels/year), yet far from a typical micro-négociant: full control from vineyard to cellar. Pure, minimalist, no-compromise — gravity flow, no pumps, minimal sulfur, no new oak for whites, max 20% for reds. Deliberately short ageing (~10 months) to keep a pure, bright and juicy fruit profile. Whites: whole-bunch press, fine lees, no bâtonnage. Reds: 100% whole cluster, fully manual, no filtration, no fining, native yeasts only.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Tiny volumes, total control. Absolute purity on this 2024 vintage, surpassing by far all previous vintages. Quantity very limited.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -544,7 +531,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Domaine Briotet d&#x27;Aprigny</h1>
@@ -552,14 +539,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-009-023.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Imported for the first time in Singapore: a new organic estate based in Beaune. Total production: 2,000 bottles/year — Chardonnay aged 18 months in oak, on lees. The wine style shows on-lees reduction (struck match, straw, gunflint) underlined by a natural acidity from a high-altitude plot.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>As a newborn estate, Marie &amp; Christophe made bold choices from their very first vintage — organic farming, tiny yields and long ageing — decisions that command real respect. Their single cuvée sits well above the usual Côte de Beaune standard, shaped by a finely controlled reductive style that many discerning drinkers actively seek out.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -582,7 +568,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE — MEURSAULT</div>
       <h1>Domaine Pierre &amp; Adrien Berlancourt</h1>
@@ -590,14 +576,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-010-026.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>A family micro-estate of just 1.6ha (organic) created in Meursault in 2005, working exclusively with Bourgogne appellation plots — both whites and reds border Puligny-Montrachet — yet treated as if they were Grand Crus, with meticulous handwork and long, careful ageing in thoughtfully selected barrels. All wines are aged at least two years: whites undergo 18–24 months of oak ageing (30% to 100% new) on fine lees, Coche-Dury style, while the reds are made entirely with whole clusters (3-week maceration) and aged 24 months. All wines bottled manually, without filtration. Pierre and Adrien farm at very low yields — around 25 hl/ha versus an area average of 65 hl/ha — for remarkable concentration in flavour and texture.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Pierre Berlancourt is one of the most humble and passionate winemakers, quietly pursuing his own vision without chasing trends. Despite tiny production and modest appellations, he consistently outperforms his classification.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -650,7 +635,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE — SAVIGNY-LÈS-BEAUNE</div>
       <h1>Domaine Simon Bize</h1>
@@ -658,11 +643,10 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-011-029.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>The iconic estate of Savigny-lès-Beaune. After the passing of Patrick Bize in 2013, his wife Chisa Bize (Japanese-born) maintained the domaine's high standards while adding her own touch. Deeply respectful of the environment, she tends her vineyards with care. In the cellar, sulfur is minimal and wines are aged in used barrels with a high percentage of whole-bunch. Chisa Bize's wines are pure, profound, ethereal and always refined — never heavy. Her Savigny-lès-Beaune remain unmissable benchmarks. Reds are vinified as whole clusters in large wooden vats, aged 1 year in old oak — supple, appealing, on sweet red fruits, spices and herbal hints. The whites are fleshy and satiny with generally tangy acids and a vibrant but textural profile.</p></div>
+        
       </div>
-      
     
   <table class="wines">
     <thead>
@@ -704,7 +688,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Roisin Curley</h1>
@@ -712,14 +696,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-012-032.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Irish-born Róisín boasts an impressive pedigree, having trained at top estates including Château Latour and Château Grillet, while earning both the Master of Wine and an MSc in Viticulture. Driven by a desire to make her own wines, she founded her micro-négoce, Maison Róisín Curley, in Burgundy. Her wines quickly gained attention in the UK, selling out within months. Despite her small production (~10,000 bottles/year), allocations are highly sought after. The wines reflect their maker: consistent, coherent and full of character. Subtle oak with a spicy lift adds aromatic charm. Lightly extracted but not lacking intensity, fresh and forward, they sparkle with vibrant phenolics — making 2023 a standout vintage.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>As a Master of Wine, Roisin has an impressive palate — and her own wines reflect it. I love the way they combine an “infusion” style with structure and body, striking a perfect balance.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -734,21 +717,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Saint-Romain 2023<span class="type">White (Chardonnay)</span></td>
         <td class="desc">Aged in used oak for 12 months. Fleshy with dry extracts — notes of lemon peel, almond and vanilla, lightly nutty, with a pleasant bready, yeasty lift. 876 bottles.</td>
         <td class="price">92</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Fixin ‘Entre Deux Velles’ 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">Ripe and deep, with a firm phenolic grip and structured tannins, balanced by sweet aromas of spice, cinnamon, black cherry and plum. Destemmed grapes, unfiltered. 1,500 bottles.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Beaune ‘Les Prévoles’ 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">70-year-old vines, 30% whole bunch with light extraction. A delicate Beaune showing violet, sweet raspberry, jam, elderberry and candy notes. Smooth with a graceful floral finish — pure delight.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Beaune 1er Cru Les Toussaints 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">50% whole bunch, aged 1 year. Floral and elegant, with an extra layer of density lifted by lovely oak and the whole-bunch component. Lovely balance of body without being over-extracted.</td>
-        <td class="price">Sold out</td>
       </tr></tbody>
   </table>
     <div class="page-foot">
@@ -757,7 +725,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Guillaume l&#x27;Echanson</h1>
@@ -765,14 +733,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-013-033.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Guillaume Boin discovered wine during his sommelier training at La Tour d'Argent and then travelled the world refining his knowledge. He honed his winemaking skills in Europe (Vin Noe, Wasenhaus...) and New Zealand (Millton Vineyards) before settling in Burgundy, launching his first official vintage in 2024. 2025 marks his second vintage. Limited to 3,000 bottles, each cuvée is handcrafted. Reds are 100% whole cluster — fresh, crisp and full of vibrant red fruit with low alcohol. Minimal sulfur, minimal intervention, zero oak. Pure juices without artifice!</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Tasted Guillaume&#x27;s wines with no expectation and was impressed by the quality — free, natural juices but totally under control.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -787,11 +754,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Bourgogne Côte d&#x27;Or 2024<span class="type">Red (Pinot Noir)</span></td>
         <td class="desc">A juicy and crispy Pinot Noir full of red berries, cranberry and red cherry. Soft tannins, low ABV. Highly drinkable!</td>
         <td class="price">74</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Savigny-lès-Beaune 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">More structure here, with extra layers of blackberry, raspberry jam, sweet spices and pomegranate — delicious for those who like whole-bunch styles (Wolber, Soyard…).</td>
-        <td class="price">Sold out</td>
       </tr></tbody>
   </table>
     <div class="page-foot">
@@ -817,7 +779,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       </div>
       </div>
     
-  <table class="wines tight">
+  <table class="wines small">
     <thead>
       <tr>
         <th class="cuvee">Cuvée</th>
@@ -825,26 +787,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <th class="price">Price</th>
       </tr></thead>
     <tbody>
-      <tr>
-        <td class="cuvee">Meursault Narvaux 2022<span class="type">White</span></td>
-        <td class="desc">Vibrant citrus and delicate white flowers meet ripe, luxurious Chardonnay notes.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Corton Grand Cru Blanc 2022<span class="type">White</span></td>
-        <td class="desc">Only 350 bottles/year. Fragrant, floral, lifted by subtle oak on a round, supple, lightly creamy body.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Corton-Charlemagne Grand Cru 2019<span class="type">White</span></td>
-        <td class="desc">Layers of complex nuance unfold gracefully, with just a hint of oak. Elegant and luxurious over a slender frame.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Corton-Charlemagne Grand Cru 2020<span class="type">White</span></td>
-        <td class="desc">Richness and stony tension, with impressive concentration — a cool personality for this very hot vintage.</td>
-        <td class="price">Sold out</td>
-      </tr>
       <tr>
         <td class="cuvee">Savigny Clos des Guettottes Monopole 2019<span class="type">Red</span></td>
         <td class="desc">Ripe dark fruits meet fresh red berries in perfect harmony. A beauty at its best now.</td>
@@ -914,16 +856,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Aloxe-Corton 1er Cru Les Petites Lolières 2020<span class="type">Red</span></td>
         <td class="desc">Aromatic and flinty, with sour cherry and red rose notes. Focused, with minerality and impressive depth.</td>
         <td class="price">129</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Corton Grand Cru Monopole Clos du Château 2019<span class="type">Red</span></td>
-        <td class="desc">Rich, full and beautifully balanced — impressive depth and mid-palate succulence. Generous, structured, bold and full of character, with no intrusive oak or tannin.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Corton Grand Cru Monopole Clos du Château 2020<span class="type">Red</span></td>
-        <td class="desc">Youthful with a dark, intriguing side. Candied orange, dried flowers and earthy notes mingle with ripe red fruits. Concentrated, fine tannins, long licorice-spice finish.</td>
-        <td class="price">Sold out</td>
       </tr></tbody>
   </table>
     <div class="page-foot">
@@ -932,7 +864,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Fil de Soie</h1>
@@ -940,14 +872,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-015-038.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>The story of this Chinese venture in Burgundy starts with a young Chinese entrepreneur — Flora Wang — setting up in Beaune after several experiences in the wine world. Production is small (10,000 bottles/year), sourced from very high-quality grapes from top plots. Defined as “smooth as silk,” the focus is on texture, with every element contributing to an effortless sense of balance. Winemaking follows a minimal-intervention philosophy with classic Burgundian technique (ageing in oak barrels, indigenous yeasts) and little extraction.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>The Sémillon is very original and full of character, while the Burgundies are expressive, well-balanced and definitely worth exploring.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -974,11 +905,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="price">82</td>
       </tr>
       <tr>
-        <td class="cuvee">Gevrey-Chambertin 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">60-year-old vines on the Justice plot. 50% new oak, 50% ceramic for 18 months, 40% whole cluster. An impressive Gevrey with a rich, complex profile of dark fruits, violet, cherry and truffle. Smooth, lifted palate with refined spice and clove.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
         <td class="cuvee">Beaune 1er Cru Clos des Mouches 2022<span class="type">Red (Pinot Noir)</span></td>
         <td class="desc">Iconic plot for a stunning wine. Aged 12 months in oak, ripe fruit layers with subtle oak spice and cinnamon. Well-integrated tannins and lively acidity make this a gorgeous, silky and fragrant Clos des Mouches.</td>
         <td class="price">170</td>
@@ -990,7 +916,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Louis Mathieu</h1>
@@ -998,14 +924,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-016-039.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>At just 24, Louis launches his first four Burgundian cuvées. A self-made talent with an unconventional path, he trained at Domaine Jacques Prieur and with Klaus-Peter Keller — where everything accelerated. His 2017 Bourgogne red “Les Nargilets” stunned in a blind tasting, earning KP Keller's respect and support. From a tiny family parcel in Côte Chalonnaise to his own Remigny-based négociant project (since 2024), Louis is now fully in motion. Style? Burgundy with a Kabinett mindset: no weight, all precision. Light extraction, gentle infusions, vibrant acidity — wines built on finesse, freshness and age-worthy elegance. Craft: old vines (30+ years), organic farming where possible, low yields, whole clusters, native ferments, no pigeage, short macerations (10–15 days), then 16 months in seasoned barrels (no new oak, from W. Kelley and KP Keller). Minimal sulphur, unfined, unfiltered.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Light-footed, aromatic, terroir-driven reds with real definition — precise, vibrant and seriously compelling. Silky texture, dangerously drinkable, with an utterly captivating perfume. Quantity very limited.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1043,7 +968,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>François Morente</h1>
@@ -1051,7 +976,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="hero-wide"><img src="images/img-017-043.jpg" alt=""></div>
       <div class="bio-block">
         <div class="bio"><p>Founded in 2012, François Morente began with a radical move: a tiny Burgundy parcel to understand wine from the ground up. A former physics teacher turned meticulous grower, each bottle reflects that raw, uncompromising journey. A true micro-estate (3,500–4,000 bottles/year), driven by precision and organic farming. Just 0.36ha in Hautes-Côtes-de-Beaune, planted at 20,000 vines/ha from massal selections of Clos des Épenots — delivering energy, purity and depth. Vineyard work is extreme (horse ploughing, manual care). In the cellar: strict selection, partial whole cluster, 12 months barrel + 4 months tank, zero sulphur. Alongside, a tiny négociant range: organic Chardonnay from the Mâconnais and Grenache from the Gard. Same philosophy — no intrants, pure expression.</p></div>
         
@@ -1091,7 +1015,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Si Tu Sais</h1>
@@ -1099,14 +1023,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-018-044.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Patrick Johnston stumbled into winemaking at Maison Harbour in 2017 — and never left. His micro-négoce, Si Tu Sais, crafts crisp, lively, modern Burgundy wines. Production is tiny — just 25 barrels in 2023 — but every bottle shows purity, tension and delicate aromatics from a small manual vertical press and careful whole-bunch use. The name, meaning “if you know, you know,” nods to Burgundy's close-knit world. Already world-class, Patrick prioritises quality over quantity, refining a style destined for allocation-only recognition. Red wines show bursts of cherries, wild raspberries, cranberries and sweet plums — fragrant, delicate and silky, centred on ripe red fruits. Whites reveal stone fruits, lime, white flowers and lemon curd — approachable and charming, with no reductive or oaky influence.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Met Patrick before the hype, and even then his drive was obvious — dynamic, sharp and relentlessly hard-working, with a clear vision of the style he wanted to achieve. His wines are vibrant, full of energy, and never boring.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1126,11 +1049,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Bourgogne Chardonnay 2023<span class="type">White (Chardonnay)</span></td>
         <td class="desc">Slightly more tropical, with guava and pineapple alongside light florals, ripe lemon, red apple, pastry, clove and a nice salinity. Refreshing acidity and a long finish. 575 bottles.</td>
         <td class="price">97</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Côte de Nuits-Villages “En Chantemerle” 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">Bolder character marked by jammy red fruits, licorice and a touch of pepper. Juicy palate, supported by smooth tannins. Will age well. 1,200 bottles.</td>
-        <td class="price">Sold out</td>
       </tr></tbody>
   </table>
     <div class="page-foot">
@@ -1139,7 +1057,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Sêves</h1>
@@ -1147,14 +1065,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-019-046.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>After working for the likes of Claire Naudin, Chanterêves and Cassiopée, Marie and Foulques founded their own estate, Sèves, in 2023. They work a single 0.63-hectare parcel, Les Cordères, in Bouzeron: a stony, north-west-facing site planted in 1981 at the top of the hill (380m). Bouzeron — the only Burgundy appellation dedicated solely to Aligoté — here delivers a complex, balanced wine from low-vigour vines rooted in clay-silt soils over white marl. Organic, little intervention, no sulfur during vinification, indigenous yeasts. Full fermentation and ageing in oak (228L and 400L) for 12 months, then 5 months in stainless steel. No fining, no filtering. Not a casual Aligoté!</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>A young, motivated couple tending their Aligoté plot like a garden, harvesting healthy grapes that give their wine a distinctive, expressive identity.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1177,7 +1094,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Sextant</h1>
@@ -1185,7 +1102,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="hero-wide"><img src="images/img-020-049.jpg" alt=""></div>
       <div class="bio-block">
         <div class="bio"><p>Sextant is a project launched in 2007 in Saint-Aubin by Carole and Julien Altaber, also the team behind Domaine Derain, a pioneer of natural wines in Burgundy. Sextant focuses on pure, natural wines: no sulfur, no additives, no new oak, minimal intervention, low ABV, unfined and unfiltered. Wild, expressive fruit with bright acidity and total authenticity. 100% organic grapes.</p></div>
         
@@ -1235,7 +1151,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer dense">
+  <section class="producer no-image dense">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Kei Shiogai</h1>
@@ -1243,14 +1159,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-021-051.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>As a micro-négoce based in Beaune, Kei launched his first vintage in 2020 after a decade working at famous estates in Burgundy. Grapes are carefully sourced, usually from the same plots, and hand-harvested by his team, with rigorous sorting in both vineyard and winery. Reds are made with 100% whole clusters, undergo extended maceration and are aged for at least one year in oak with little sulfur; whites are also fully aged in oak. Reds are very aromatic — whole-cluster aromas of floral, ripe strawberry, peony, cola and sweet spices on smooth tannins. The whites are concentrated and intense, in a classic Côte de Beaune style.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Met Kei and became a close friend even before his first vintage. With no connections in Burgundy, he spent a decade working for other estates, patiently defining his style, then demonstrated exceptional resolve in creating his own venture — establishing a singular wine identity despite the obstacles of a deeply conservative region. Respect. Quantity very limited.</p>
+      </div>
       </div>
     
   <table class="wines small">
@@ -1262,21 +1177,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       </tr></thead>
     <tbody>
       <tr>
-        <td class="cuvee">Gevrey-Chambertin 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">From the Baraques plot. Already expressive, can be opened soon.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Gevrey-Chambertin Baraques 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">Millerands grapes from the Baraques plot. Aromatic and intense.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Gevrey-Chambertin 1er Cru Cherbaudes 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">1er Cru right below Charmes-Chambertin, needs time to open up (keep at least 2 years).</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
         <td class="cuvee">Pommard Poisot 2023<span class="type">Red (Pinot Noir)</span></td>
         <td class="desc">From old vines on a single plot. Always highly aromatic — Kei&#x27;s benchmark cuvée.</td>
         <td class="price">495</td>
@@ -1285,11 +1185,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Vin de France Cuvée Dame Hertz 2023<span class="type">White (Riesling)</span></td>
         <td class="desc">Grapes selected by Kei in Alsace. 2023 is the final vintage for this cuvée. Aged in oak.</td>
         <td class="price">220</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Chassagne-Montrachet Fontaine Sot 2023<span class="type">White (Chardonnay)</span></td>
-        <td class="desc">Single plot bordering Puligny. Powerful.</td>
-        <td class="price">Sold out</td>
       </tr>
       <tr>
         <td class="cuvee">Puligny-Montrachet Corvée des Vignes 2023<span class="type">White (Chardonnay)</span></td>
@@ -1313,7 +1208,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE BEAUNE</div>
       <h1>Isabel Claire</h1>
@@ -1321,14 +1216,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-022-053.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>First of all, Isabel is the one who keeps you occupied the whole time with her idea of Drops and sharing wine like she's some kind of wine Robin Hood — equal parts chaos, fairness, and pure enthusiasm, through her successful project “Between Two Bottles.” But behind the fun is a very real craft story. Isabel sharpened her work at Maison Glandien and Les Jardins Vivants, learning wine the unglamorous way: in the vines, in the cellar, and under the pressure of harvest when every decision suddenly matters. Over the past three years she's been hands-on, building a deep, practical understanding of Burgundy precision — from pressing choices to élevage details and the patience it takes to let a wine become itself. In 2023 she took the leap and made her own wine with a fresh perspective: fruit-forward, vibrant and instantly charming, but still anchored in tradition and uncompromising quality.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>That first vintage was an ultra-limited debut — just 400 bottles — not a “launch,” more like a personal statement. Quantity very limited.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1351,7 +1245,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE NUITS</div>
       <h1>Domaine Modot-Guyon</h1>
@@ -1359,14 +1253,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-023-054.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Domaine Modot-Guyon, led by sixth-generation Adrien Guyon (25yo), has revived its historic Chambolle-Musigny estate after nearly two decades of silence. The 4ha domaine produces wines from old vines with minimal intervention, organically managed (horse ploughing) and aged in oak. The wines are unfined, unfiltered and expressive without flashy tech or heavy-handed winemaking. Adrien's goal: ethereal, elegant wines with depth that express Chambolle-Musigny terroir. Superb value for price.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Despite owning highly prestigious plots, Adrien Guyon remains humble and down-to-earth, offering wines that deliver excellent value while steadily investing in quality.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1381,16 +1274,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Bourgogne Pinot Noir 2023<span class="type">Red (Pinot Noir)</span></td>
         <td class="desc">Juicy cherry and raspberry with a hint of spice. From 60-year-old vines in Côte de Nuits — elegant, lightly oaked and ready to enjoy now.</td>
         <td class="price">56</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Chambolle-Musigny “Les Creux-Baissants” 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">100% whole bunch from 85-year-old vines above Chambolle. Floral, smoky and silky, with black cherry, pepper and a hint of smoked meat. Delicious now.</td>
-        <td class="price">Sold out</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Chambolle-Musigny 1er Cru “Les Fuées” 2023<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">Just beside Bonnes-Mares Grand Cru, also 100% whole bunch. Ethereal, floral, deep and lifted by stony acidity. Full of blackcurrant, blackberry, tobacco leaf, violet and sweet spices. Already delightful.</td>
-        <td class="price">Sold out</td>
       </tr></tbody>
   </table>
     <div class="page-foot">
@@ -1399,7 +1282,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer dense">
+  <section class="producer no-image dense">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE NUITS</div>
       <h1>Domaine Gérard Peirazeau &amp; Fils</h1>
@@ -1407,14 +1290,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-024-056.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Sharing the same family's old-vine holdings as Robert Groffier but on a much smaller scale (3.65ha only), Domaine Peirazeau focuses on clean destemmed berries, gentle fermentation and minimal-intervention oak ageing. The wines reveal a bright red and black fruit profile, silky texture and ethereal balance — offering classic Côte de Nuits elegance and depth at an excellent value.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>The wines here are always delivering in a classic style but worth the price — the kind of wine you are always happy to drink!</p>
+      </div>
       </div>
     
   <table class="wines small">
@@ -1487,7 +1369,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer dense">
+  <section class="producer no-image dense">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE NUITS</div>
       <h1>Jérémy Recchione</h1>
@@ -1495,14 +1377,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-025-059.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Jérémy founded his own estate in 2019. He works naturally, with hand-sorted whole-cluster grapes, native yeasts, little extraction and very little sulfur, using different kinds of vessels for ageing — large oak barrels, amphorae and more. His wines reflect their terroir and vintage, with pure, vibrant aromas: refreshingly funky, crafted with precision.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Jérémy crafts his wines without artifice, working tirelessly in the vineyard to harvest pristine grapes that require minimal intervention. This direct, honest approach results in vibrant, lively wines full of energy.</p>
+      </div>
       </div>
     
   <table class="wines small">
@@ -1585,7 +1466,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">ALSACE</div>
       <h1>Jintaro Yura</h1>
@@ -1593,14 +1474,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-026-064.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Jintaro Yura stands apart in Alsace, crafting wines defined by purity, balance and originality. Working with organically grown grapes, his approach to white wines breaks from classic Alsatian tradition, favouring short, firm pressings, native yeast fermentations and ageing in a mix of oak, steel and clay. His Pinot Noir is equally distinctive, using a significant proportion of whole clusters vinified in an infusion style. The 2024 vintage marks his fourth release and, with the move to his own winery and facilities, his most accomplished to date. Inspired by Burgundian lees work and ageing, his wines show depth, freshness and a distinctive savory, umami-driven character — precise, pure and deeply expressive.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Jintaro is a close friend of Kei, so I had the chance to meet him before his first vintage. Above all, he is passionate about wine, and it shows in his own creations — wines that follow his unique style and vision, entirely outside Alsace norms.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1620,11 +1500,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
         <td class="cuvee">Alsace “Le Silence et la Résonance” 2024<span class="type">White (Riesling)</span></td>
         <td class="desc">Aged 10 months on the lees in a mix of concrete, steel and wood, unfined, low sulfur. Vibrant and energetic, with succulent stone fruit, zesty citrus, peach-skin texture and fragrant florals. Precise, balanced, moderate alcohol (12.5%).</td>
         <td class="price">70</td>
-      </tr>
-      <tr>
-        <td class="cuvee">Alsace “Le Partie et le Tout” 2024<span class="type">Red (Pinot Noir)</span></td>
-        <td class="desc">50/50 whole cluster and destemmed, aged in Burgundian oak. Juicy and crispy, bursting with red berries — cranberry, raspberry, redcurrant, plum — tangy acids, pure fruit, pure energy. 2024 is Jintaro&#x27;s best yet, almost a top Jura red.</td>
-        <td class="price">Sold out</td>
       </tr></tbody>
   </table>
     <div class="page-foot">
@@ -1633,7 +1508,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">LOIRE</div>
       <h1>Nicolas Barbou</h1>
@@ -1641,11 +1516,10 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-027-066.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Driven by freedom, Nicolas Barbou merges art and wine into one singular vision. After years in Burgundy alongside Jean-Yves Bizot, he returned to the Loire to create something entirely his own — precision shaped by Burgundy, guided by independence. Humble, sharp and deeply committed, he crafts wines as expressions of identity. Inspired by Aristotle — “Art and wine are the superior joys of the free man” — his approach is uncompromising. Vineyards are living ecosystems: biological farming, minimal intervention, constant observation. In the cellar: whole-bunch pressing, long élevage (20–36 months) in used barrels, no racking, minimal sulfur. Precision without artifice. Each parcel, each cuvée — its own voice, its own message. A young project, already highly sought-after.</p></div>
+        
       </div>
-      
     
   <table class="wines">
     <thead>
@@ -1672,7 +1546,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">NORTHERN RHÔNE</div>
       <h1>Marie &amp; Pierre Bénetière</h1>
@@ -1680,14 +1554,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-028-068.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>A discreet but highly sought-after name in the Northern Rhône, Domaine Marie & Pierre Bénetière has built a cult following since the early 2000s. Working a tiny 1.7-hectare estate in Côte-Rôtie, the domaine delivers wines of striking precision, depth and authenticity — firmly rooted in tradition and terroir. Set on steep, granite- and schist-rich slopes, the vineyards benefit from exceptional drainage and mineral tension. Native yeasts, minimal intervention; organic-minded farming, strict selection, hand-harvested fruit; whole cluster, native fermentations, mostly submerged cap, co-fermented with ~5% Viognier. Aged in oak (just 15% new), no racking, bottled unfined & unfiltered. Built to age, yet already compelling in youth.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>A true insider&#x27;s domaine — tiny production, meticulous work and unwavering standards. Their wines are increasingly hard to secure and highly prized by sommeliers and collectors alike. A hallmark of traditional Northern Rhône — a unicorn legend and a humble human. Quantity limited.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1715,7 +1588,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer dense">
+  <section class="producer no-image dense">
     <header class="producer-head">
       <div class="eyebrow">NORTHERN RHÔNE</div>
       <h1>Domaine de la Grande Colline</h1>
@@ -1723,14 +1596,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-029-071.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Perched atop the Cornas amphitheatre, Domaine de la Grande Colline is one of the appellation's most striking sites — steep granite terraces, south-east facing, delivering Syrahs of tension, lift and raw energy. At the helm, Jonathan Jacquart brings both precision and instinct. His path reads like a masterclass: Emmanuel Reynaud at Château Rayas, Thierry Allemand, Hirotake Ooka and stints across Alsace, Jura, Languedoc and Burgundy (Domaine Dujac). When Hirotake Ooka returned to Japan, Thierry Allemand joined forces with Jonathan Jacquart to carry Grande Colline forward. Since 2018, Jonathan has sharpened precision and consistency, pushing a fully biodynamic, living-soil approach with no chemicals — just pure vineyard life. High-altitude Cornas brings freshness; in the cellar: whole cluster, gentle extraction, minimal sulfur and neutral oak (ex-Dujac) to let the site speak. Given the micro production of the Grande Colline cuvée (4 barrels a year), Jonathan also runs a small négociant activity — Bibendum (“Nunc est bibendum”) — bright, effortless wines made for pure drinking pleasure.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>The result? A new wave of Cornas — deep, peppery, vibrant and precise. No longer a hidden gem, Grande Colline is a rising benchmark.</p>
+      </div>
       </div>
     
   <table class="wines small">
@@ -1788,7 +1660,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">SOUTHERN RHÔNE</div>
       <h1>Henri Bonneau</h1>
@@ -1796,17 +1668,16 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-030-076.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Henri Bonneau (1938–2016), 12th-generation vigneron, built a cult legacy from the 1950s. His father pioneered estate bottling in Châteauneuf-du-Pape in 1927, and Robert Parker later dubbed him the “Godfather of Châteauneuf-du-Pape.” The 6.5ha domaine is dominated by very old Grenache (~90%), with Mourvèdre, Counoise, Cinsault and Vaccarèse across 13 prime parcels (including top ones like La Crau and Grand Pierre). No recipes — only instinct, with final blends decided years later, just before bottling. Traditional to the core: low yields, late harvest, whole cluster, native fermentations in concrete, then 6–10 years' ageing in old foudres. No new oak, no filtration. The range is tight — Réserve des Célestins, Marie Beurrier, Cuvée Henri Bonneau, Les Rouliers — for a grand total of ~25,000 bottles/year. Since 2016 the estate continues seamlessly with family and Daniel Combin under the same philosophy and timeless greatness.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Pure, deep, iconic Châteauneuf-du-Pape. Cult.</p>
       </div>
+      </div>
     
-  <table class="wines">
+  <table class="wines tight">
     <thead>
       <tr>
         <th class="cuvee">Cuvée</th>
@@ -1871,7 +1742,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">SOUTHERN RHÔNE</div>
       <h1>Domaine de Faverand</h1>
@@ -1879,14 +1750,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-031-078.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Nestled at the foot of Mont Ventoux (Southern Rhône), Domaine de Faverand spans 5 hectares of old vines (Grenache, Carignan) on sandy, clay-limestone soils, giving the wines remarkable finesse. Taken over in 2020 by the former agent of Château Rayas, part of the vineyard has been converted to agroforestry, boosting biodiversity and soil balance. In just its second vintage, the estate asserts its identity through natural winemaking: spontaneous fermentations, no additives and gentle remontage, producing wines that are concentrated yet balanced. The style is aromatic, with velvety tannins and juicy Grenache — jammy, garrigue-style wines reminiscent of Reynaud (Rayas and Tours): olives, cherry, raspberry jam, violet, thyme and orange peel.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>Because the wines are reminiscent of Reynaud&#x27;s style: aromatic, intense, with silky tannins and an addictive perfume.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -1924,7 +1794,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer dense">
+  <section class="producer no-image dense">
     <header class="producer-head">
       <div class="eyebrow">LANGUEDOC</div>
       <h1>The Languedoc Unicorns</h1>
@@ -1932,11 +1802,10 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-032-079.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Here is a selection of the rarest and most sought-after wines from the Languedoc. Great Southern wines, without the clichés of the South — that's what links these wines from Oratoire St Jean d'Aureilhan, Bergerie de l'Arcade and Maxime Renaudin, all of which have a direct link with the Vaillé family of Grange des Pères. For Languedoc enthusiasts, these niche domaines are worth exploring: small productions, sensational wines, great young yet with huge ageing potential.</p></div>
+        
       </div>
-      
     
   <table class="wines small">
     <thead>
@@ -2095,7 +1964,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">ITALY — CHIANTI</div>
       <h1>Il Vignaiolo</h1>
@@ -2103,14 +1972,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-034-085.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Toru Oikawa, born in 1981, moved to Italy in 2014, where he began working for the legendary Gianfranco Soldera at Case Basse, learning artisanal, minimal-intervention methods. In 2020 he finally found the right vineyards to launch his own project — giving birth to Il Vignaiolo di Toru Oikawa on just one hectare in Chianti. His approach is pure and uncompromising: organic farming, spontaneous fermentations, minimal intervention, old oak, no fining, no filtration. Tiny production, singular vision. Tuscany's new unicorn has arrived: a confidential release of just 2,000 bottles — a wine of singular style, deep intensity, soaring aromatics and seamlessly integrated tannins, with remarkable freshness and zero heat. While all wines are produced within Chianti Classico, they are labelled Toscana IGT — inspired by Soldera and, above all, to give Toru complete freedom in grape varieties and methods.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>The first time I tasted Luna it was blind, and I was stunned by the intensity and depth of the wine without feeling any heavy tannins — convinced the winemaker was very skilful and making his own style. The right criteria to jump on it!</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -2133,7 +2001,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">GERMANY — RHEINHESSEN</div>
       <h1>Moritz Kissinger</h1>
@@ -2141,14 +2009,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-035-086.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>Kissinger first caught collectors' attention when Klaus Peter Keller praised his Chardonnay. Since then, his scarce releases (Chardonnay, Sauvignon Blanc, Weissburgunder and Riesling from limestone-rich Rheinhessen) have become a phenomenon. Fourth-generation, Moritz Kissinger is only the second to bottle estate wines, farming ~7ha in Uelversheim with his wife Jasmin. Driven by purity and energy, their wines bring a Burgundian-like precision to Rheinhessen while boldly celebrating terroir and minimal intervention. As Tomoko Kuriyama (Chanterêves) notes: “soul, warmth and effortless elegance.” Part of a new wave redefining Germany, Kissinger crafts terroir-driven, minimal-intervention wines with energy and precision.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>One of the most exciting rising names in Germany.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -2201,7 +2068,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">GERMANY — RHEINHESSEN</div>
       <h1>Carsten Saalwächter</h1>
@@ -2209,14 +2076,13 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="bio-block with-image">
-        <div class="portrait"><img src="images/img-036-089.jpg" alt=""></div>
+      <div class="bio-block">
         <div class="bio"><p>“The Coche-Dury of Ingelheim.” Bold, slightly tongue-in-cheek but grounded in reality: density, depth and ambition with striking precision and clarity. Carsten Saalwächter, leading this nearly 200-year-old estate, embodies the new Rheinhessen — rooted in tradition, shaped by Burgundy. From 8ha of limestone, wind-swept vineyards in Ingelheim, he crafts Silvaner, Chardonnay and Pinots, with a rare focus on Silvaner. Slate soils across the Rhine add another layer of expression. Burgundy-inspired but fully his own: long pressings, oxidative handling, slow fermentations, extended élevage, whole-cluster for reds. The result: Burgundian texture meets German tension, with wines of depth, energy and precision.</p></div>
-      </div>
-      
+        
       <div class="why">
         <span class="why-label">Why Vibrant</span>
         <p>No trends, just vision. A rising benchmark — pure, precise and unmistakably distinctive.</p>
+      </div>
       </div>
     
   <table class="wines">
@@ -2259,7 +2125,7 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
     </div>
   </section>
 
-  <section class="producer">
+  <section class="producer no-image">
     <header class="producer-head">
       <div class="eyebrow">SPAIN — RUEDA</div>
       <h1>Manu Cantalapiedra</h1>
@@ -2267,7 +2133,6 @@ table.wines.tight td.cuvee .type { font-size: 6.6pt; }
       <div class="rule"></div>
     </header>
     
-      <div class="hero-wide"><img src="images/img-037-092.jpg" alt=""></div>
       <div class="bio-block">
         <div class="bio"><p>Manuel Cantalapiedra (37yo) leads the new wave of Verdejo, cutting through industrial Rueda (North-West Spain) to reveal the raw, mineral soul of the Castilian plateau. Based in La Seca with roots back to the 19th century, the turning point came in 2014 when Manuel began bottling his own wines. Today he farms ~20ha (organic, biodynamic practices) centred on old-vine Verdejo, including rare pre-phylloxera and ungrafted parcels. Dry farming, late harvests, precision. In the cellar: native fermentations, ageing in tank or used oak, minimal sulfur, unfined & unfiltered. The wines are pure, vibrant and deeply terroir-driven — a radical Verdejo: raw, saline, reductive, alive.</p></div>
         
