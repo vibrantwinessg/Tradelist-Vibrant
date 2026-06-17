@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <title>Vibrant Wines — Tradelist</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
 <style>
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; }
 html, body {
   margin: 0; padding: 0;
-  font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, 'Liberation Serif', serif;
+  font-family: 'Constantia', Georgia, 'Liberation Serif', serif;
   color: #2b2117;
-  background: #f4ecdf;
+  background: #f4ecdf !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
   font-size: 12px;
 }
 /* ---------- Page shell ---------- */
@@ -39,21 +40,21 @@ html, body {
 
 /* ---------- Cover ---------- */
 .cover { display: flex; flex-direction: column; align-items: center; text-align: center; background: #fbf6ec; }
-.cover-inner { width: 100%; padding-top: 20mm; display:flex; flex-direction:column; align-items:center; }
-.logo { max-width: 130mm; margin: 0 auto 6mm auto; display:block; }
+.cover-inner { width: 100%; padding-top: 3mm; display:flex; flex-direction:column; align-items:center; }
+.logo { max-width: 80mm; margin: 0 auto 4mm auto; display:block; }
 .cover-rule { width: 60mm; height: 1pt; background: #c9a76a; margin: 4mm auto; }
 .cover-rule.small { width: 40mm; margin: 6mm auto 8mm auto; }
 .cover-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Constantia', Georgia, serif;
   font-weight: 600;
   font-size: 34pt;
   letter-spacing: 6px;
   text-transform: uppercase;
-  color: #5a1525;
+  color: #2b2117;
   margin: 0;
 }
-.cover-sub { font-style: italic; font-size: 13pt; color: #4a3b2a; margin: 3mm 0 1mm 0; }
-.cover-meta { font-size: 9.5pt; letter-spacing: 2px; text-transform: uppercase; color: #8a1f33; margin: 0; }
+.cover-sub { font-style: italic; font-size: 13pt; color: #2b2117; margin: 3mm 0 1mm 0; }
+.cover-meta { font-size: 9.5pt; letter-spacing: 2px; text-transform: uppercase; color: #2b2117; margin: 0; }
 
 .toc { width: 100%; text-align: left; margin-top: 4mm; }
 .toc::after { content: ""; display: block; clear: both; }
@@ -61,13 +62,13 @@ html, body {
   float: left; width: 30%; margin: 0 3.33% 5mm 0; box-sizing: border-box;
 }
 .toc-region h3 {
-  font-size: 8.5pt; letter-spacing: 2px; text-transform: uppercase;
-  color: #8a1f33; border-bottom: 0.6pt solid #c9a76a; padding-bottom: 1.2mm; margin: 0 0 1.2mm 0;
+  font-size: 14pt; letter-spacing: 2px; text-transform: uppercase;
+  color: #2b2117; border-bottom: 0.6pt solid #c9a76a; padding-bottom: 1.2mm; margin: 0 0 1.5mm 0;
   font-weight: 600;
 }
 .toc-region ul { list-style: none; margin: 0; padding: 0; }
 .toc-region li {
-  font-size: 8.6pt; color: #3a2e22; line-height: 1.45;
+  font-size: 13pt; color: #2b2117; line-height: 1.5;
   font-style: italic;
 }
 
@@ -78,7 +79,7 @@ html, body {
   font-style: normal; font-weight: 600; margin-bottom: 1mm;
 }
 .producer h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Constantia', Georgia, serif;
   font-size: 29pt; font-weight: 600; margin: 0; color: #2b2117; letter-spacing: 0.5px;
   line-height: 1.08;
 }
@@ -101,25 +102,25 @@ html, body {
   width: 100%; height: 38mm; object-fit: cover; display:block;
   border: 0.75pt solid #c9a76a; padding: 1.5mm; background: #fff;
 }
-.bio { font-size: 11pt; line-height: 1.42; text-align: justify; color: #332a1f; }
+.bio { font-size: 12pt; line-height: 1.42; text-align: justify; color: #332a1f; }
 .bio p { margin: 0 0 1.8mm 0; }
-.dense .bio { font-size: 9.8pt; line-height: 1.35; }
+.dense .bio { font-size: 10.8pt; line-height: 1.35; }
 
 .why {
   margin: 2mm 0; padding: 2mm 3.5mm; background: #fdf8ee;
   border-left: 2pt solid #8a1f33;
 }
 .why-label {
-  display:block; font-size: 8.5pt; letter-spacing: 2.5px; text-transform: uppercase;
+  display:block; font-size: 9.5pt; letter-spacing: 2.5px; text-transform: uppercase;
   color: #8a1f33; font-weight: 600; margin-bottom: 0.8mm;
 }
-.why p { margin: 0; font-style: italic; font-size: 10.6pt; line-height: 1.35; color: #4a3b2a; }
-.dense .why p { font-size: 9.6pt; }
+.why p { margin: 0; font-style: italic; font-size: 11.6pt; line-height: 1.35; color: #4a3b2a; }
+.dense .why p { font-size: 10.6pt; }
 
 /* ---------- Wine table ---------- */
 table.wines { width: 100%; border-collapse: collapse; margin-top: 1.5mm; table-layout: fixed; }
 table.wines th {
-  text-align: left; font-size: 8.6pt; letter-spacing: 2px; text-transform: uppercase;
+  text-align: left; font-size: 9.6pt; letter-spacing: 2px; text-transform: uppercase;
   color: #8a1f33; font-weight: 600; border-bottom: 1pt solid #8a1f33; padding: 1.2mm 2mm;
 }
 table.wines th.price, table.wines td.price { text-align: right; }
@@ -127,24 +128,24 @@ table.wines th.cuvee, table.wines td.cuvee { width: 28%; }
 table.wines th.vintage, table.wines td.vintage { width: 12%; }
 table.wines th.price, table.wines td.price { width: 13%; }
 table.wines td {
-  font-size: 10.4pt; line-height: 1.28; padding: 1.4mm 2mm; vertical-align: top;
+  font-size: 11.4pt; line-height: 1.28; padding: 1.4mm 2mm; vertical-align: top;
   border-bottom: 0.5pt solid #e3d4ba; color: #332a1f;
 }
 table.wines tbody tr:nth-child(even) { background: #fbf3e6; }
 table.wines td.cuvee { font-weight: 600; color: #2b2117; }
 table.wines td.cuvee .type {
-  display:block; font-style: italic; font-weight: 400; color: #8a1f33; font-size: 9.2pt; margin-top: 0.5mm;
+  display:block; font-style: italic; font-weight: 400; color: #8a1f33; font-size: 10.2pt; margin-top: 0.5mm;
 }
 table.wines td.vintage { font-weight: 600; color: #2b2117; white-space: nowrap; }
 table.wines td.price { font-weight: 600; color: #8a1f33; font-variant-numeric: tabular-nums; white-space: nowrap; }
-table.wines.small td, table.wines.small th { font-size: 9pt; padding: 0.9mm 1.6mm; line-height: 1.2; }
-table.wines.small td.cuvee .type { font-size: 8pt; }
-table.wines.tight td, table.wines.tight th { font-size: 8.4pt; padding: 0.7mm 1.6mm; line-height: 1.15; }
-table.wines.tight td.cuvee .type { font-size: 7.4pt; }
-table.wines.ultra td, table.wines.ultra th { font-size: 8pt; padding: 0.5mm 1.6mm; line-height: 1.1; }
-table.wines.ultra td.cuvee .type { font-size: 7pt; }
-.ultra .bio { font-size: 10pt; line-height: 1.32; }
-.ultra .why p { font-size: 9.8pt; }
+table.wines.small td, table.wines.small th { font-size: 10pt; padding: 0.9mm 1.6mm; line-height: 1.2; }
+table.wines.small td.cuvee .type { font-size: 9pt; }
+table.wines.tight td, table.wines.tight th { font-size: 9.4pt; padding: 0.7mm 1.6mm; line-height: 1.15; }
+table.wines.tight td.cuvee .type { font-size: 8.4pt; }
+table.wines.ultra td, table.wines.ultra th { font-size: 9pt; padding: 0.5mm 1.6mm; line-height: 1.1; }
+table.wines.ultra td.cuvee .type { font-size: 8pt; }
+.ultra .bio { font-size: 12pt; line-height: 1.32; }
+.ultra .why p { font-size: 10.8pt; }
 .ultra .why { padding: 1.5mm 3.5mm; }
 
 /* ---------- Photo bandeau ---------- */
@@ -156,6 +157,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
 .bandeau img {
   flex: 0 0 auto;
   width: auto;
+  object-fit: cover;
   border: 0.5pt solid #c9a76a;
   display: block;
 }
@@ -175,26 +177,25 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
       <img class="logo" src="images/logo2.png" alt="Vibrant Wines">
       <div class="cover-rule"></div>
       <h1 class="cover-title">Tradelist</h1>
-      <p class="cover-sub">A Portfolio of Growers, Vignerons &amp; Small Domaines</p>
-      <p class="cover-meta">Prices in SGD &middot; GST excluded &middot; June 2026</p>
+      <p class="cover-meta" style="font-size:13pt;letter-spacing:1px;">Prices in SGD &middot; GST excluded &middot; June 2026</p>
+      <p class="cover-meta" style="font-size:13pt;letter-spacing:1px;margin-top:2mm;text-transform:none;">+65 8154 1125 &nbsp;&middot;&nbsp; info@vibrantwines.com &nbsp;&middot;&nbsp; www.vibrantwines.com</p>
       <div class="cover-rule small"></div>
       <div class="toc">
-        
         <div class="toc-region">
           <h3>Champagne</h3>
-          <ul><li>Antoine Berthelot</li><li>Jonathan Cornevin</li><li>Alexandre Grimée</li></ul>
+          <ul><li>Antoine Berthelot</li><li>Jules Brochet</li><li>Jonathan Cornevin</li><li>Alexandre Grimée</li></ul>
         </div>
         <div class="toc-region">
           <h3>Chablis</h3>
-          <ul><li>Domaine du Triptyque (Tommy Chevallier)</li><li>Thomas Tixier</li><li>Domaine Tribut-Dauvissat</li></ul>
+          <ul><li>Thomas Tixier</li><li>Domaine Tribut-Dauvissat</li><li>Domaine du Triptyque</li></ul>
         </div>
         <div class="toc-region">
           <h3>Côte de Beaune</h3>
-          <ul><li>Aymon (Nicolas Protin)</li><li>Briotet d&#x27;Aprigny</li><li>Pierre &amp; Adrien Berlancourt</li><li>Simon Bize</li><li>Roisin Curley</li><li>Guillaume l&#x27;Echanson</li><li>Caroline Frey</li><li>Fil de Soie</li><li>Louis Mathieu</li><li>Francois Morente</li><li>Si Tu Sais (Patrick Johnston)</li><li>Sêves</li><li>Sextant</li><li>Kei Shiogai</li><li>Isabel Claire</li></ul>
+          <ul><li>Aymon (Nicolas Protin)</li><li>Pierre &amp; Adrien Berlancourt</li><li>Simon Bize</li><li>Briotet d&#x27;Aprigny</li><li>Leovila (Leocadie Benech)</li><li>Jeremy Carteret</li><li>Isabel Claire</li><li>Roisin Curley</li><li>Guillaume l&#x27;Echanson</li><li>Fil de Soie</li><li>Caroline Frey</li><li>Glandien et Jardins Vivants (Tino Kuban)</li><li>Louis Mathieu</li><li>Francois Morente</li><li>Sêves</li><li>Sextant</li><li>Kei Shiogai</li><li>Si Tu Sais (Patrick Johnston)</li><li>Thyades (Pierric Brochet)</li></ul>
         </div>
         <div class="toc-region">
           <h3>Côte de Nuits</h3>
-          <ul><li>Domaine Modot-Guyon</li><li>Domaine Gerard Peirazeau &amp; Fils</li><li>Jeremy Recchione</li></ul>
+          <ul><li>Domaine Modot-Guyon</li><li>Gerard Peirazeau &amp; Fils</li><li>Jeremy Recchione</li></ul>
         </div>
         <div class="toc-region">
           <h3>Alsace</h3>
@@ -206,7 +207,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         </div>
         <div class="toc-region">
           <h3>Rhône</h3>
-          <ul><li>Marie et Pierre Benetière</li><li>Grande Colline (Jonathan Jacquart)</li><li>Henri Bonneau</li><li>Domaine de Faverand</li></ul>
+          <ul><li>Marie et Pierre Bénetière</li><li>Henri Bonneau</li><li>Adrien Emond</li><li>Domaine de Faverand</li><li>Grande Colline (Jonathan Jacquart)</li></ul>
         </div>
         <div class="toc-region">
           <h3>Languedoc</h3>
@@ -229,7 +230,6 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
           <ul><li>Manu Cantalapiedra</li></ul>
         </div>
       </div>
-    </div>
     <div class="page-foot cover-foot">00</div>
   </section>
 
@@ -242,7 +242,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     </header>
     
       <div class="bio-block">
-        <div class="bio"><p>Antoine Berthelot launched his domaine in 2022, taking over family parcels in Verpillières-sur-Ource planted in the early 1980s. Trained in viticulture and oenology, with experience in Gevrey-Chambertin, Corsica and Les Riceys, he now crafts micro-production wines with a clear artisanal and quality-driven focus. Steep, south-facing vineyards on poor, stony soils deliver wines of striking character and precision. Farming is low-intervention and meticulous: no mechanisation, minimal copper, herbal treatments, cover crops, and strict double sorting for perfect fruit. In the cellar, gentle pressing, native yeast fermentations, and ageing in used oak preserve purity and terroir expression. No fining, no filtration, and minimal sulphur. Each parcel is vinified separately before a precise, vintage-driven blend.</p></div>
+        <div class="bio"><p>One of Champagne's most exciting new voices. Launched in 2022 on steep, south-facing family parcels in the Côte des Bar, Antoine Berthelot brings rare precision to micro-production winemaking. Trained across Gevrey, Corsica and Les Riceys, his approach is uncompromising: no mechanisation, native yeasts, used oak, zero fining or filtration. Each parcel vinified separately. The result — Champagnes of striking purity, tension and personality, hand-crafted from the ground up.</p></div>
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
@@ -274,7 +274,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">93</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-002-001.jpg" alt="" style="height:75mm"><img src="images/img-002-002.jpg" alt="" style="height:75mm"><img src="images/img-002-003.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="justify-content:space-between"><img src="images/img-002-001.jpg" alt="" style="height:75mm"><img src="images/img-002-002.jpg" alt="" style="height:75mm"><img src="images/img-002-003.jpg" alt="" style="height:75mm"></div>
     <div class="page-foot">01</div>
   </section>
 
@@ -287,7 +287,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     </header>
     
       <div class="bio-block">
-        <div class="bio"><p>Based in Rouvres-les-Vignes (Aube, Côte des Bar), Jonathan comes from a family of growers who always sold their fruit. Trained in Beaune and shaped by top estates, everything shifted after a blind tasting of “Sous Poids” 2020 — his trigger to pursue zero-sulphur winemaking. Today he farms just two parcels: 0.6ha Pinot Noir in Bar-sur-Aube (organic), and 0.25ha Chardonnay in Rouvres-les-Vignes, a true experimental playground (high-trained vines, no trimming, no soil work, grazing animals…). In a region still bound by convention, Jonathan stands apart. In the cellar: total non-intervention.</p></div>
+        <div class="bio"><p>Based in Rouvres-les-Vignes (Aube, Côte des Bar), Jonathan comes from a family of growers who always sold their fruit. Trained in Beaune and shaped by top estates, everything shifted when he discovered zero-sulphur winemaking. Today he farms just two parcels: 0.6ha Pinot Noir in Bar-sur-Aube (organic), and 0.25ha Chardonnay in Rouvres-les-Vignes, a true experimental playground (high-trained vines, no trimming, no soil work, grazing animals…). In a region still bound by convention, Jonathan stands apart. In the cellar: total non-intervention.</p></div>
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
@@ -309,7 +309,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">105</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-003-005.jpg" alt="" style="height:75mm"><img src="images/img-003-006.jpg" alt="" style="height:75mm"><img src="images/img-003-007.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="justify-content:space-between"><img src="images/img-004-009.jpg" alt="" style="height:75mm;width:56mm;object-fit:cover"><img src="images/img-004-010.jpg" alt="" style="height:75mm;width:56mm;object-fit:cover"><img src="images/img-004-012.jpg" alt="" style="height:75mm;width:56mm;object-fit:cover"></div>
     <div class="page-foot">02</div>
   </section>
 
@@ -322,11 +322,11 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     </header>
     
       <div class="bio-block">
-        <div class="bio"><p>Planted in 1973 by his grandparents, a tiny 0.6ha parcel in Bonneil — an overlooked village in the western Marne Valley — lays the foundation of Alexandre's Champagnes. Mid-slope, south-facing, between forest and river, it's a perfect site for Pinot Meunier. Fifty years on, these old vines deliver some of the region's most compelling expressions. Alexandre Grimée started in 2014 at just 18, and quickly made his mark. On a microscopic scale, he crafts some of Champagne's most striking single-vineyard Meunier: one wine, one plot, one village, one vintage. Today the estate spans just 1 hectare, producing around 2,000 bottles a year — rare, sought-after, uncompromised. Certified organic, rooted in calcareous clay on steep southern slopes. Everything is done by Alexandre alone, with precision and restraint. Only the heart of the press is kept. No blending, no fixed recipe.</p></div>
+        <div class="bio"><p>Started at 18. One hectare. One village. One grape. Alexandre Grimée is the purist's purist — crafting some of Champagne's most riveting single-vineyard Pinot Meunier from a tiny 0.6ha parcel in Bonneil planted by his grandparents in 1973. Fifty-year-old vines on steep calcareous clay, certified organic, worked entirely alone. No blending, no fixed recipe — just instinct, restraint and obsessive precision. Rare, sought-after, and absolutely uncompromised.</p></div>
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
-        <p>Tiny production. Singular vision. Quantity very limited.</p>
+        <p>One plot, one grape, one village, one vintage. Alexandre Grimée crafts some of Champagne’s most distinctive expressions of Pinot Meunier from just a handful of old vines in Bonneil.</p>
       </div>
       </div>
     
@@ -344,7 +344,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">117</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-004-009.jpg" alt="" style="height:75mm"><img src="images/img-004-010.jpg" alt="" style="height:75mm"><img src="images/img-004-012.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau"><img src="images/img-003-005.jpg" alt="" style="height:75mm"><img src="images/img-003-006.jpg" alt="" style="height:75mm"><img src="images/img-003-007.jpg" alt="" style="height:75mm"></div>
     <div class="page-foot">03</div>
   </section>
 
@@ -357,7 +357,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     </header>
     
       <div class="bio-block">
-        <div class="bio"><p>Domaine du Triptyque is one of Chablis' most exciting new organic estates, founded in 2023 in the village of Venoy by Tommy Chevallier. Built from family vineyards and a six-year vision, the domaine spans just 5.5 hectares, farmed with deep respect for soil life and biodiversity. Certified organic since 2022, Tommy also pioneers resistant grape varieties such as Voltis and Floréal, dramatically reducing vineyard treatments while pushing toward a more sustainable future for Chablis. Triptyque is more than a winery: it is a philosophy where nature, wine and art converge — from artist-designed labels to the striking eco-built cellar completed in 2024 using bio-sourced materials. In the cellar: native fermentations, gentle élevage, and absolute respect for fruit and terroir.</p></div>
+        <div class="bio"><p>Born in 2023, Domaine du Triptyque is Chablis' most exciting new organic estate. Tommy Chevallier spent six years building his vision before releasing a single bottle — and it shows. Just 5.5 hectares farmed with obsessive care, pioneer resistant varieties, a stunning bio-sourced cellar, artist-designed labels. Nature, wine and art in perfect harmony. In the cellar: native fermentations, gentle élevage, zero compromise.</p></div>
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
@@ -389,7 +389,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">67</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-005-013.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="margin-left:-13mm;margin-right:-13mm;width:calc(100% + 26mm)"><img src="images/img-005-013.jpg" alt="" style="height:75mm;width:100%;object-fit:cover"></div>
     <div class="page-foot">04</div>
   </section>
 
@@ -437,11 +437,15 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     </header>
     
       <div class="bio-block">
-        <div class="bio"><p>For many, Raveneau and Dauvissat define benchmark Chablis. Through his marriage into the Dauvissat family and hands-on mentorship, Laurent Tribut has emerged as one of the appellation's most compelling talents. Today, alongside his daughter, he farms 5 hectares largely drawn from Dauvissat family holdings, initially vinified at the domaine under René and Vincent's guidance. Though now based at his own winery nearby, Tribut remains firmly rooted in this tradition.</p>
-<p>William Kelley: “Organic grapes, moderate yields, hand-harvesting at full maturity, fermentation in temperature-controlled stainless steel tanks and enameled steel, followed — typically from February — by élevage on the lees in used oak, form the cornerstones of the estate's approach. This methodology will be familiar to followers of Vincent Dauvissat's wines, and it remains unchanged under the new generation. In short, readers can buy with confidence across the range, which comprises just four wines under the Domaine Tribut label.”</p></div>
-        
+      <div class="bio-block">
+        <div class="bio"><p>For many, Raveneau and Dauvissat define benchmark Chablis. Through his marriage into the Dauvissat family and hands-on mentorship, Laurent Tribut emerged too without any doubt. Today, alongside his daughter, he farms 5 hectares largely drawn from Dauvissat family holdings, initially vinified at the domaine under René and Vincent’s guidance.</p>
+<p>William Kelley: “Organic grapes, moderate yields, hand-harvesting at full maturity, fermentation in stainless steel tanks, followed by ageing on the lees in used oak : this way will be familiar to followers of Vincent Dauvissat’s wines and it remains unchanged. Domaine Tribut continues to stand as a reference for classic, artisanal Chablis. In short, readers can buy with confidence across the range, which comprises just four wines under the Domaine Tribut label.”</p></div>
       </div>
     
+      <div class="why">
+        <span class="why-label">Why Vibrant</span>
+        <p>Authenticity over fashion. Tribut-Dauvissat remains one of Chablis’ quiet legends, producing wines of exceptional precision, tension and longevity.</p>
+      </div>
   <table class="wines">
     <thead>
       <tr>
@@ -461,7 +465,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">98</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-007-017.jpg" alt="" style="height:75mm"><img src="images/img-007-016.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="margin-left:-13mm;margin-right:-13mm;width:calc(100% + 26mm);gap:2mm"><img src="images/img-007-A.jpg" alt="" style="height:75mm;width:72mm;object-fit:cover;flex-shrink:0"><img src="images/img-007-B.jpg" alt="" style="height:75mm;width:62mm;object-fit:cover;flex-shrink:0"><img src="images/img-007-C.jpg" alt="" style="height:75mm;width:72mm;object-fit:cover;flex-shrink:0"></div>
     <div class="page-foot">06</div>
   </section>
 
@@ -516,7 +520,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">199</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-008-018.jpg" alt="" style="height:68mm"><img src="images/img-008-019.jpg" alt="" style="height:68mm"><img src="images/img-008-021.jpg" alt="" style="height:68mm"></div>
+    <div class="bandeau"><img src="images/img-008-018.jpg" alt="" style="height:68mm;max-width:59mm"><img src="images/img-008-019.jpg" alt="" style="height:68mm;max-width:59mm"><img src="images/img-008-021.jpg" alt="" style="height:68mm;max-width:59mm"></div>
     <div class="page-foot">07</div>
   </section>
 
@@ -632,6 +636,10 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <div class="bio"><p>The iconic estate of Savigny-lès-Beaune. After the passing of Patrick Bize in 2013, his wife Chisa Bize (Japanese-born) maintained the domaine's high standards while adding her own touch. Deeply respectful of the environment, she tends her vineyards with care. In the cellar, sulfur is minimal and wines are aged in used barrels with a high percentage of whole-bunch. Chisa Bize's wines are pure, profound, ethereal and always refined — never heavy. Her Savigny-lès-Beaune remain unmissable benchmarks. Reds are vinified as whole clusters in large wooden vats, aged 1 year in old oak — supple, appealing, on sweet red fruits, spices and herbal hints. The whites are fleshy and satiny with generally tangy acids and a vibrant but textural profile.</p></div>
         
       </div>
+      <div class="why">
+        <span class="why-label">Why Vibrant</span>
+        <p>One of Savigny-lès-Beaune’s most iconic estates, crafting wines of purity, balance and remarkable transparency to terroir.</p>
+      </div>
     
   <table class="wines">
     <thead>
@@ -667,7 +675,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">74</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-011-028.jpg" alt="" style="height:75mm"><img src="images/img-011-029.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau"><img src="images/img-011-028.jpg" alt="" style="height:75mm;max-width:88mm"><img src="images/img-011-029.jpg" alt="" style="height:75mm;max-width:88mm"></div>
     <div class="page-foot">10</div>
   </section>
 
@@ -954,7 +962,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
-        <p>Tiny volumes. Hands-on craft. Absolute purity.</p>
+        <p>An uncompromising pursuit of quality, from ultra-high-density vineyards to meticulous cellar work, delivering wines of striking depth and character.</p>
       </div>
       </div>
     
@@ -982,7 +990,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">67</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-017-043.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="margin-left:-13mm;margin-right:-13mm;width:calc(100% + 26mm)"><img src="images/img-017-043.jpg" alt="" style="height:75mm;width:100%;object-fit:cover"></div>
     <div class="page-foot">16</div>
   </section>
 
@@ -1326,7 +1334,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     <div class="page-foot">23</div>
   </section>
 
-  <section class="producer no-image dense">
+  <section class="producer no-image ultra">
     <header class="producer-head">
       <div class="eyebrow">CÔTE DE NUITS</div>
       <h1>Jérémy Recchione</h1>
@@ -1417,7 +1425,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">141</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-025-058.jpg" alt="" style="height:72mm"><img src="images/img-025-059.jpg" alt="" style="height:72mm"><img src="images/img-025-061.jpg" alt="" style="height:72mm"></div>
+    <div class="bandeau" style="justify-content:center;gap:4mm"><img src="images/recchione-1.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/recchione-2.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/recchione-3.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"></div>
     <div class="page-foot">24</div>
   </section>
 
@@ -1457,7 +1465,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">70</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-026-062.jpg" alt="" style="height:75mm"><img src="images/img-026-063.jpg" alt="" style="height:75mm"><img src="images/img-026-064.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="justify-content:center;gap:4mm"><img src="images/yura-1.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/yura-2.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/yura-3.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"></div>
     <div class="page-foot">25</div>
   </section>
 
@@ -1474,6 +1482,10 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         
       </div>
     
+      <div class="why">
+        <span class="why-label">Why Vibrant</span>
+        <p>These are not your typical Sauvignon Blancs. Nicolas Barbou crafts textured, terroir-driven wines that combine depth, freshness and remarkable personality.</p>
+      </div>
   <table class="wines">
     <thead>
       <tr>
@@ -1493,7 +1505,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">91</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-027-066.jpg" alt="" style="height:75mm"><img src="images/img-027-067.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="justify-content:center;gap:6mm"><img src="images/img-027-066.jpg" alt="" style="height:100mm;width:auto;object-fit:contain"><img src="images/img-027-067.jpg" alt="" style="height:100mm;width:auto;object-fit:contain"></div>
     <div class="page-foot">26</div>
   </section>
 
@@ -1533,7 +1545,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">364</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-028-068.jpg" alt="" style="height:75mm"><img src="images/img-028-069.jpg" alt="" style="height:75mm"><img src="images/img-028-070.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="justify-content:center;gap:4mm"><img src="images/benetiere-1.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/benetiere-2.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/benetiere-3.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"></div>
     <div class="page-foot">27</div>
   </section>
 
@@ -1550,7 +1562,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
-        <p>The result? A new wave of Cornas — deep, peppery, vibrant and precise. No longer a hidden gem, Grande Colline is a rising benchmark.</p>
+        <p>Biodynamic farming, whole-cluster fermentation and minimal intervention result in wines of exceptional purity and energy.</p>
       </div>
       </div>
     
@@ -1588,8 +1600,8 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">279</td>
       </tr>
       <tr>
-        <td class="cuvee">Vin de France Bibendum Rouge 2023 (100% Cinsault)<span class="type">Red</span></td>
-        <td class="desc">Same origin as Bibendum white. Hand harvested, native yeast, whole cluster, extraction by pumping over. More body and concentration than 2022. Aged in stainless steel. No inputs except minimal sulfur.</td>
+        <td class="cuvee">Vin de France Bibendum Rouge 2023 (100% Grenache)<span class="type">Red</span></td>
+        <td class="desc">100% Grenache from organically farmed vineyards. Whole-cluster fermentation, native yeasts, minimal sulfur. A joyful, ultra-drinkable red offering crunchy red berries, wild herbs, flowers and sweet spices. Silky texture, vibrant freshness and a long mineral finish.</td>
         <td class="price">61</td>
       </tr>
       <tr>
@@ -1603,7 +1615,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">208</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-029-071.jpg" alt="" style="height:75mm"><img src="images/img-029-072.jpg" alt="" style="height:75mm"><img src="images/img-029-074.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau"><img src="images/img-029-071.jpg" alt="" style="height:75mm;max-width:59mm"><img src="images/img-029-072.jpg" alt="" style="height:75mm;max-width:59mm"><img src="images/img-029-074.jpg" alt="" style="height:75mm;max-width:59mm"></div>
     <div class="page-foot">28</div>
   </section>
 
@@ -1683,7 +1695,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">345</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-030-075.jpg" alt="" style="height:75mm"><img src="images/img-030-076.jpg" alt="" style="height:75mm"><img src="images/img-030-077.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau"><img src="images/img-030-075.jpg" alt="" style="height:75mm;max-width:59mm"><img src="images/img-030-076.jpg" alt="" style="height:75mm;max-width:59mm"><img src="images/img-030-077.jpg" alt="" style="height:75mm;max-width:59mm"></div>
     <div class="page-foot">29</div>
   </section>
 
@@ -1733,7 +1745,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">72</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-031-078.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau" style="justify-content:center;gap:4mm"><img src="images/img-031-078.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/faverand-2.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"><img src="images/faverand-3.jpg" alt="" style="height:75mm;width:auto;object-fit:contain"></div>
     <div class="page-foot">30</div>
   </section>
 
@@ -1825,7 +1837,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
     <tbody>
       <tr>
         <td class="vintage">2018</td>
-        <td class="desc">Still a baby, restrained and compact, on deep black cherry, blueberry and plum aromas. Enjoyable, with strong potential to deliver all the BAMA magic in a couple of years.</td>
+        <td class="desc">Still a baby — restrained, compact, on deep black cherry, blueberry and plum. Strong potential to deliver all the BAMA magic in a couple of years.</td>
         <td class="price">100</td>
       </tr>
       <tr>
@@ -1835,12 +1847,12 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
       </tr>
       <tr>
         <td class="vintage">2015</td>
-        <td class="desc">Already approachable — a fantastic vintage. Fresh red berries (wild strawberry, cranberry) lifted by floral, minty and saline notes. Elegant, vibrant palate with black cherry and cassis, silky tannins and a long, refined finish.</td>
+        <td class="desc">Fantastic vintage. Fresh wild strawberry and cranberry lifted by floral, minty, saline notes. Elegant and vibrant, with silky tannins and a long, refined finish.</td>
         <td class="price">100</td>
       </tr>
       <tr>
         <td class="vintage">2014</td>
-        <td class="desc">Surprisingly deep and layered, unlike most wines of this vintage — smooth tannins, red berries, blueberry, Asian spices and cranberry. Lively and lovely!</td>
+        <td class="desc">Surprisingly deep for this vintage — smooth tannins, red berries, blueberry, Asian spices and cranberry. Lively and lovely!</td>
         <td class="price">100</td>
       </tr>
       <tr>
@@ -1850,37 +1862,37 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
       </tr>
       <tr>
         <td class="vintage">2012</td>
-        <td class="desc">Ripe blackberries, raspberries, plums and sweet spices. Broad and generous on the palate with silky texture and mineral lift — true BAMA spirit, finishing in true Burgundy style with leather, fresh mushroom and spice.</td>
+        <td class="desc">Ripe blackberries, raspberries, plums and sweet spices. Silky texture, mineral lift — true BAMA spirit with a Burgundian finish of leather and fresh mushroom.</td>
         <td class="price">100</td>
       </tr>
       <tr>
         <td class="vintage">2011</td>
-        <td class="desc">Refined, silky and elegant, with striking acidity and a structure built to age for decades. Aromas of plum, dark cherry and blueberry layered with tobacco, leather and oak.</td>
+        <td class="desc">Refined, silky and elegant, with striking acidity built to age for decades. Plum, dark cherry and blueberry layered with tobacco, leather and oak.</td>
         <td class="price">100</td>
       </tr>
       <tr>
         <td class="vintage">2010</td>
-        <td class="desc">Blue and black fruits, savoury earth and sweet, clove-tinged tannins. Restrained, thoughtful and quietly complex, with refined tertiary notes. Blind, you might never guess Bordeaux.</td>
+        <td class="desc">Blue and black fruits, savoury earth, clove-tinged tannins. Quietly complex with refined tertiary notes — blind, you might never guess Bordeaux.</td>
         <td class="price">105</td>
       </tr>
       <tr>
         <td class="vintage">2009</td>
-        <td class="desc">A pure, captivating bouquet of cranberry, wild strawberry, mint and a hint of iodine. Medium-bodied and vibrant, with a fine acid line, pristine red fruit and a poised, energetic finish. A beautiful wine.</td>
+        <td class="desc">Pure, captivating bouquet of cranberry, wild strawberry, mint and iodine. Medium-bodied, vibrant, with a fine acid line and a poised, energetic finish.</td>
         <td class="price">105</td>
       </tr>
       <tr>
         <td class="vintage">2005</td>
-        <td class="desc">Tobacco- and graphite-tinged nose leaning to black fruit. Medium-bodied and crisp, building gently with fine tannins, a precise acid line and a nuanced, clove-spiced finish. Dense yet refined, with black plum and balsamic.</td>
+        <td class="desc">Tobacco and graphite nose over black fruit. Medium-bodied and crisp, with fine tannins, a precise acid line and a clove-spiced finish. Dense yet refined.</td>
         <td class="price">105</td>
       </tr>
       <tr>
         <td class="vintage">1998</td>
-        <td class="desc">Singing today, tasting far younger than its age. Juicy, full-bodied and silky with layers of blackcurrant, raspberry, bay leaf, umami and iron notes. Beautifully balanced with a Burgundian elegance.</td>
+        <td class="desc">Singing today, far younger than its age. Juicy, silky, with blackcurrant, raspberry, bay leaf, umami and iron notes. Beautifully balanced Burgundian elegance.</td>
         <td class="price">105</td>
       </tr>
       <tr>
         <td class="vintage">1996</td>
-        <td class="desc">Drinking beautifully, with plum and cassis layered with fresh tobacco, gentle spice and sweet earth. Velvety and pure, with fine concentration and melting tannins — now entering a long, generous plateau of maturity.</td>
+        <td class="desc">Drinking beautifully — plum and cassis with fresh tobacco, gentle spice and sweet earth. Velvety, pure, melting tannins, entering a long plateau of maturity.</td>
         <td class="price">105</td>
       </tr>
       <tr>
@@ -1890,16 +1902,17 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
       </tr>
       <tr>
         <td class="vintage">1986</td>
-        <td class="desc">Tobacco and sous-bois bouquet, more St-Julien in style, brooding. A masculine entry with taut structure, yet a core of black fruit shines. Saline notes and a lingering black pepper finish make this uncompromising but fascinating.</td>
+        <td class="desc">Tobacco and sous-bois, St-Julien in style. Masculine, taut structure with a core of black fruit. Saline notes and lingering black pepper — uncompromising but fascinating.</td>
         <td class="price">250</td>
       </tr>
       <tr>
         <td class="vintage">1970</td>
-        <td class="desc">A complex bouquet of dried red fruit, cassis, pencil shavings, violets and a subtle touch of cigar ash introduces a supple, elegant but concentrated wine with lovely depth at its core, melted tannins and pitch-perfect balance.</td>
+        <td class="desc">Dried red fruit, cassis, pencil shavings, violets and cigar ash. Supple, concentrated, with lovely depth, melted tannins and pitch-perfect balance.</td>
         <td class="price">250</td>
       </tr></tbody>
   </table>
     
+    <div class="bandeau" style="margin-left:-13mm;margin-right:-13mm;width:calc(100% + 26mm);gap:2mm"><img src="images/bama-1.jpg" alt="" style="height:45mm;width:124mm;object-fit:cover;flex-shrink:0"><img src="images/bama-2.jpg" alt="" style="height:45mm;width:67mm;object-fit:cover;flex-shrink:0"></div>
     <div class="page-foot">32</div>
   </section>
 
@@ -1951,7 +1964,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
-        <p>One of the most exciting rising names in Germany.</p>
+        <p>Old soils, new generation. Moritz Kissinger is crafting some of Germany's most vibrant and terroir-transparent wines today.</p>
       </div>
       </div>
     
@@ -2016,7 +2029,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         
       <div class="why">
         <span class="why-label">Why Vibrant</span>
-        <p>No trends, just vision. A rising benchmark — pure, precise and unmistakably distinctive.</p>
+        <p>German precision meets Burgundian finesse. Carsten Saalwächter's old-vine wines capture the purity, texture and energy of Ingelheim's limestone terroirs.</p>
       </div>
       </div>
     
@@ -2054,7 +2067,7 @@ table.wines.ultra td.cuvee .type { font-size: 7pt; }
         <td class="price">76</td>
       </tr></tbody>
   </table>
-    <div class="bandeau"><img src="images/img-036-089.jpg" alt="" style="height:75mm"><img src="images/img-036-090.jpg" alt="" style="height:75mm"><img src="images/img-036-091.jpg" alt="" style="height:75mm"></div>
+    <div class="bandeau"><img src="images/img-036-089.jpg" alt="" style="height:75mm;max-width:59mm"><img src="images/img-036-090.jpg" alt="" style="height:75mm;max-width:59mm"><img src="images/img-036-091.jpg" alt="" style="height:75mm;max-width:59mm"></div>
     <div class="page-foot">35</div>
   </section>
 
